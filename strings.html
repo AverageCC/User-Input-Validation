@@ -1,17 +1,23 @@
 <!DOCTYPE html> <!-- This initializes the strings.html file -->
 <html lang="en"> <!-- This sets the language of the file to English -->
 <head> <!-- This is the head of the file -->
-    <title>Palindrome 3.1</title> <!-- This sets the title of the webpage tab to Palindrome 3.1 -->
+    <title>User Input Validation</title> <!-- This sets the title of the webpage tab to User Input Validation -->
     <link rel="stylesheet" href="main.css"> <!-- This links the main.css file to our current file -->
 </head>
-<body> <!-- This is the body of the webpage -->
-    <img class="left-image" src="funnihaha.png"> <!-- Call funnihaha.png and displays it on the left side of the pahge. class="left-image" use .left-image in main.css to set the parameters for my image -->
-    <img class="right-image" src="funniimage.png"> <!-- Call funniimage.png and displays it on the left side of the pahge. class="right-image" use .left-image in main.css to set the parameters for my image -->
-    <h1>Palindrome Check</h1> <!-- This is the title of the webpage -->
-    <p id="subtitle">Click below to check for palindromes</p> <!-- This is the subtitle of the webpage -->
-    <input type="text" id="palindrome"> <!-- This is the input field for the user to input a string -->
-    <button onclick="palindromeCheck()">Check</button> <!-- This button calls the palindromeCheck() function from our linked palindromecheck.js file -->
-    <p id="result"></p> <!-- This displays the results from our query. Reference can be found on Line 12 & 14 of palindromeCheck.js -->
-    <script src="palindromecheck.js"></script> <!-- This links the palindromecheck.js file to our current html file to reference -->
+<body> 
+    <img class="left-image" src="funnihaha.png"> 
+    <img class="right-image" src="funniimage.png"> 
+    <h1>Validate Your Info</h1> 
+    <form id="validationForm"> 
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <label for="zipCode">Zip Code:</label>
+        <input type="text" id="zipCode" name="zipCode">
+        <input type="submit" value="Submit">
+    <p id="result"></p>
+    <p id="secretMessage" style="display: none;">This is the secret message.</p>
+    <script src="Validator.js"></script> 
 </body>
 </html>
