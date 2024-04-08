@@ -3,7 +3,7 @@ body::before { /* This is the body before the body that exists. It is being used
     position: absolute; /* This centers the outline of the textbox that wraps around my elements */
     top: 50%; /* This sets the middle of my text box to be half way down the page */
     left: 50%; /* This sets the middle of my text box to be half way from the side of the page */
-    width: 545px; /* This sets left to right to be 50% */
+    width: 455px; /* This sets left to right to be 50% */
     height: 390px; /* This sets top to bottom to be 50% */
     background-color: white; /* This sets the color of the text box to white */
     border: 2px solid black; /* This sets the border of the text box to be 2px thick and black */

@@ -4,8 +4,8 @@ function validationCheck(firstName, lastName, zipCode) {
         return false;
     }
 
-    var zipCodePattern = /^[0-9]{5}$/;
-    if (!zipCodePattern.test(zipCode)) {
+    var zipCodeNumber = Number(zipCode);
+    if (isNaN(zipCodeNumber) || zipCode.length !== 5) {
         return false;
     }
 
@@ -16,12 +16,27 @@ function validationCheck(firstName, lastName, zipCode) {
 function validateForm(event) {
     var firstName = document.getElementById('firstName').value;
     var lastName = document.getElementById('lastName').value;
+    var fullName = firstName + ' ' + lastName;
+
+    // Check if fullName has more than 20 characters
+    if (fullName.length > 20) {
+        alert('Full name cannot exceed 20 characters');
+        return; 
+    }
+
     var zipCode = document.getElementById('zipCode').value;
+
+    // Check if zipCode is exactly 5 digits
+    if (zipCode.length !== 5 || isNaN(zipCode)) {
+        alert('Zip code must be exactly 5 digits');
+        return; // Stop execution
+    }
 
     // Prevent form submission
     event.preventDefault();
 
-    if (!validationCheck(firstName, lastName, zipCode)) {
+    // Check if firstName, lastName, and zipCode are not empty
+    if (firstName === "" || lastName === "" || zipCode === "") {
         document.getElementById('result').textContent = 'Invalid input';
     } else {
         document.getElementById('result').textContent = 'Valid input';
